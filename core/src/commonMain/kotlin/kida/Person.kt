@@ -3,7 +3,7 @@ package kida
 import kotlin.js.JsExport
 
 @JsExport
-interface PersonInfo {
+interface Person {
     val name: String
     val sex: Sex
     val dateOfBirth: String

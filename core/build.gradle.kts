@@ -10,19 +10,27 @@ kotlin {
     jvm { library() }
     js(IR) { library() }
 //    val nativeTargets = nativeTargets(true)
-    val nativeTargets = linuxTargets(true)
+//    val nativeTargets = linuxTargets(true)
 
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(projects.koncurrentLaterCore)
-                api(kotlinx.serialization.core)
+                api(projects.koncurrentLaterCoroutines)
+                api(ktor.client.core)
+                api(kotlinx.serialization.json)
+            }
+        }
+
+        val jvmMain by getting {
+            dependencies {
+                api(ktor.client.cio)
             }
         }
 
         val commonTest by getting {
             dependencies {
                 implementation(projects.koncurrentLaterTest)
+                implementation(projects.expectCoroutines)
             }
         }
     }

@@ -1,0 +1,6 @@
+- [ ] Add descriptive error handling
+    - [ ] Probably creating a NidaException
+    - [ ] Probably creating a InvalidNinException
+    - [ ] Probably creating a NotFoundException
+- [ ] Add more test subjects
+    - [ ] Make test subjects configurable if possible

@@ -7,5 +7,5 @@ import kotlin.js.JsExport
 
 @JsExport
 interface NidaApi {
-    fun info(nin: String): Later<PersonInfo>
+    fun info(nin: String): Later<Person>
 }

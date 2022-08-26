@@ -10,7 +10,7 @@ kotlin {
     jvm { library() }
     js(IR) { library() }
 //    val nativeTargets = nativeTargets(true)
-    val nativeTargets = linuxTargets(true)
+//    val nativeTargets = linuxTargets(true)
 
     sourceSets {
         val commonMain by getting {
