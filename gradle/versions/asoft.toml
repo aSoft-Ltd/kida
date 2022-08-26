@@ -1,0 +1,41 @@
+[versions]
+root = "2.0.8"
+foundation = "1.5.3"
+
+[libraries]
+expect-core = { module = "tz.co.asoft:expect-core", version.ref = "root" }
+expect-coroutines = { module = "tz.co.asoft:expect-coroutines", version.ref = "root" }
+
+functions-core = { module = "tz.co.asoft:functions-core", version.ref = "root" }
+
+koncurrent-later-core = { module = "tz.co.asoft:koncurrent-later-core", version.ref = "root" }
+koncurrent-later-coroutines = { module = "tz.co.asoft:koncurrent-later-coroutines", version.ref = "root" }
+koncurrent-later-test = { module = "tz.co.asoft:koncurrent-later-test", version.ref = "root" }
+
+koncurrent-primitives-core = { module = "tz.co.asoft:koncurrent-primitives-core", version.ref = "root" }
+koncurrent-primitives-coroutines = { module = "tz.co.asoft:koncurrent-primitives-coroutines", version.ref = "root" }
+koncurrent-primitives-mock = { module = "tz.co.asoft:koncurrent-primitives-mock", version.ref = "root" }
+
+kotlinx-browser = { module = "tz.co.asoft:kotlinx-browser", version.ref = "foundation" }
+kotlinx-collections-atomic = { module = "tz.co.asoft:kotlinx-collections-atomic", version.ref = "foundation" }
+kotlinx-collections-interoperable = { module = "tz.co.asoft:kotlinx-collections-interoperable", version.ref = "foundation" }
+
+live-core = { module = "tz.co.asoft:live-core", version.ref = "root" }
+live-compose = { module = "tz.co.asoft:live-compose", version.ref = "root" }
+live-coroutines = { module = "tz.co.asoft:live-coroutines", version.ref = "root" }
+live-react = { module = "tz.co.asoft:live-react", version.ref = "root" }
+live-test = { module = "tz.co.asoft:live-test", version.ref = "root" }
+
+logging-console = { module = "tz.co.asoft:logging-console", version.ref = "foundation" }
+logging-test-android = { module = "tz.co.asoft:logging-test-android", version.ref = "foundation" }
+
+viewmodel-core = { module = "tz.co.asoft:viewmodel-core", version.ref = "root" }
+viewmodel-compose = { module = "tz.co.asoft:viewmodel-compose", version.ref = "root" }
+viewmodel-coroutines = { module = "tz.co.asoft:viewmodel-coroutines", version.ref = "root" }
+viewmodel-react = { module = "tz.co.asoft:viewmodel-react", version.ref = "root" }
+viewmodel-test = { module = "tz.co.asoft:viewmodel-test", version.ref = "root" }
+
+[plugins]
+applikation = { id = "tz.co.asoft.applikation", version.ref = "foundation" }
+library = { id = "tz.co.asoft.library", version.ref = "foundation" }
+deploy = { id = "tz.co.asoft.deploy", version.ref = "foundation" }

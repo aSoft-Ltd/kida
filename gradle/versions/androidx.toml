@@ -1,0 +1,10 @@
+[versions]
+agp = "7.0.1"
+lifecycle = "2.4.0"
+
+[libraries]
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+
+[plugins]
+library = { id = "com.android.library", version.ref = "agp" }

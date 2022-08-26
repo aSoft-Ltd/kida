@@ -1,0 +1,27 @@
+{
+  "obj": {
+    "result": {
+      "NIN": "19940624141120000327",
+      "FIRSTNAME": "MSANGYA",
+      "MIDDLENAME": "ANDERSON",
+      "SURNAME": "MSANGYA",
+      "SEX": "MALE",
+      "DATEOFBIRTH": "1994-06-24",
+      "NATIONALITY": "TANZANIAN",
+      "Nationality": "NA-170",
+      "NationalIDNumber": "19940624141120000327",
+      "FirstName": "MSANGYA",
+      "MiddleName": "ANDERSON",
+      "LastName": "MSANGYA",
+      "Sex": "MALE",
+      "DateofBirth": "1994-06-24"
+    },
+    "_startTotalMemory": 310051608,
+    "_end": "2022-08-26T21:37:34.030341",
+    "_start": "2022-08-26T21:37:31.9990223",
+    "_endTotalMemory": 310774516,
+    "_usedTotalMemory": 722908,
+    "error": "",
+    "_elapsed": 2.056
+  }
+}

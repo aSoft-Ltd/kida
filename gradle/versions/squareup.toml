@@ -1,0 +1,6 @@
+[versions]
+okio = "3.2.0"
+
+[libraries]
+okio-core = { module = "com.squareup.okio:okio", version.ref = "okio" }
+okio-fake = { module = "com.squareup.okio:okio-fakefilesystem", version.ref = "okio" }
