@@ -2,6 +2,8 @@
 
 Unofficial Concurrent Kotlin Multiplatform NIDA API
 
+![badge][badge-maven] ![badge][badge-mpp] ![badge][badge-linux] ![badge][badge-macos] ![badge][badge-android] ![badge][badge-ios] ![badge][badge-watchos] ![badge][badge-tvos] ![badge][badge-js] ![badge][badge-jvm]
+
 ![Kotlin](https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=&logoColor=white)
@@ -102,3 +104,23 @@ This makes it easier to catch bugs and offer enhancements required
 - [koncurrent-later](https://github.com/aSoft-Ltd/koncurrent/tree/main/later) - Non blocking kotlin multiplatform library
 - [nida](https://github.com/Kalebu/Nida) - The python equivalent library
 - [laravel-nida](https://github.com/alphaolomi/laravel-nida) The php equivalent library
+
+[badge-maven]: https://img.shields.io/maven-central/v/tz.co.asoft/kida-core/2?style=flat
+
+[badge-mpp]: https://img.shields.io/badge/kotlin-multiplatform-blue?style=flat
+
+[badge-macos]: http://img.shields.io/badge/platform-macos-silver.svg?style=flat
+
+[badge-linux]: http://img.shields.io/badge/platform-linux-green.svg?style=flat
+
+[badge-android]: http://img.shields.io/badge/platform-android-brightgreen.svg?style=flat
+
+[badge-jvm]: http://img.shields.io/badge/platform-jvm-orange.svg?style=flat
+
+[badge-ios]: http://img.shields.io/badge/platform-ios-silver.svg?style=flat
+
+[badge-tvos]: http://img.shields.io/badge/platform-tvos-silver.svg?style=flat
+
+[badge-watchos]: http://img.shields.io/badge/platform-watchos-silver.svg?style=flat
+
+[badge-js]: http://img.shields.io/badge/platform-js-yellow.svg?style=flat
