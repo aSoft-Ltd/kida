@@ -34,6 +34,22 @@ dependencies {
 }
 ```
 
+## Ktor
+
+To make it easy for ktor users to choose their own client engines
+We have provided an extra artifact kida-ktor where one would include
+the artifact and their favourite ktor-client engine
+
+### Setup
+
+```kotlin
+dependencies {
+    implementation("tz.co.asoft:kida-ktor:<version>")
+    implementation("io.ktor:ktor-client-android:<ktor-version>") // for android engine
+    implementation("io.ktor:ktor-client-cio:<ktor-version>") // for cio engine
+}
+```
+
 ## Coroutines Support
 
 This api has been made in a non-blocking but still easily
