@@ -16,12 +16,21 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(projects.kidaApi)
+                api(projects.koncurrentLaterCoroutines)
+                api(ktor.client.core)
+            }
+        }
+
+        val jvmTest by getting {
+            dependencies {
+//                api(ktor.client.cio)
             }
         }
 
         val commonTest by getting {
             dependencies {
                 implementation(projects.koncurrentLaterTest)
+                implementation(projects.expectCoroutines)
             }
         }
     }
@@ -29,5 +38,5 @@ kotlin {
 
 aSoftOSSLibrary(
     version = asoft.versions.root.get(),
-    description = "An implementation of the cache-api to help caching simple objects in memory"
+    description = "Unofficial Kotlin Multiplatform NIDA API"
 )

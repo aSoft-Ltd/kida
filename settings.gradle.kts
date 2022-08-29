@@ -41,4 +41,4 @@ includeSubs("koncurrent-primitives", "../koncurrent/primitives", "core", "corout
 includeSubs("koncurrent-later", "../koncurrent/later", "core", "coroutines", "test")
 
 // submodules
-includeSubs("kida", ".", "core", "fake")
+includeSubs("kida", ".", "api", "core", "ktor", "fake")

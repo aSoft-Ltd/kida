@@ -12,11 +12,10 @@ class NidaApiTest {
         expect(1 + 1).toBe(2)
     }
 
-    val api = NidaApi()
-
     @Test
     @Ignore
     fun should_fetch_data() = runTest {
+        val api = NidaApi()
         val res = api.info("039230930984234").await()
     }
 }

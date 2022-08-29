@@ -15,13 +15,8 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(projects.kidaApi)
-            }
-        }
-
-        val commonTest by getting {
-            dependencies {
-                implementation(projects.koncurrentLaterTest)
+                api(projects.koncurrentLaterCore)
+                api(kotlinx.serialization.json)
             }
         }
     }
@@ -29,5 +24,5 @@ kotlin {
 
 aSoftOSSLibrary(
     version = asoft.versions.root.get(),
-    description = "An implementation of the cache-api to help caching simple objects in memory"
+    description = "Unofficial Kotlin Multiplatform NIDA API"
 )
