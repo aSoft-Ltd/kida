@@ -30,10 +30,6 @@ logging-console = { module = "tz.co.asoft:logging-console", version.ref = "found
 logging-test-android = { module = "tz.co.asoft:logging-test-android", version.ref = "foundation" }
 
 viewmodel-core = { module = "tz.co.asoft:viewmodel-core", version.ref = "root" }
-viewmodel-compose = { module = "tz.co.asoft:viewmodel-compose", version.ref = "root" }
-viewmodel-coroutines = { module = "tz.co.asoft:viewmodel-coroutines", version.ref = "root" }
-viewmodel-react = { module = "tz.co.asoft:viewmodel-react", version.ref = "root" }
-viewmodel-test = { module = "tz.co.asoft:viewmodel-test", version.ref = "root" }
 
 [plugins]
 applikation = { id = "tz.co.asoft.applikation", version.ref = "foundation" }
