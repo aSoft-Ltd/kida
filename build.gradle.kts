@@ -8,6 +8,7 @@ import java.util.*
     alias(kotlinz.plugins.serialization) apply false
     alias(kotlinz.plugins.compose) apply false
     alias(asoft.plugins.library) apply false
+    alias(kotlinz.plugins.dokka)
     alias(nexus.plugins.publish)
     alias(asoft.plugins.deploy)
 }
