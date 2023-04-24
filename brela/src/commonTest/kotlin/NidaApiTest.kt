@@ -3,6 +3,7 @@ import kida.NidaApiBrela
 import koncurrent.later.await
 import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
+import kotlin.test.Ignore
 
 class NidaApiTest {
 
