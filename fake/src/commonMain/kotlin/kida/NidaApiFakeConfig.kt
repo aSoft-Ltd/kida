@@ -6,9 +6,9 @@ import kotlinx.collections.interoperable.List
 import kotlinx.collections.interoperable.iListOf
 
 class NidaApiFakeConfig(
-    override val executor: Executor = SynchronousExecutor,
+    val executor: Executor = SynchronousExecutor,
     val fakes: List<Person> = DEFAULT_FAKES
-) : NidaApiConfig {
+) {
     companion object {
         val DEFAULT_FAKES = iListOf(
             Person(
