@@ -6,10 +6,9 @@ import kotlin.test.Test
 
 class NidaApiFakeTest {
 
+    val api: NidaApi = NidaApiFake()
     @Test
     fun should_return_a_response_for_a_valid_nin() {
-        val api: NidaApi = NidaApiFake()
-
         api.info(nin = "19900101000000000001").then { person ->
             expect(person.name).toBe("John Makongoro Doe")
         }.test()
