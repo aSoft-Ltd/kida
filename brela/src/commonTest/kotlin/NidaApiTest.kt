@@ -6,15 +6,10 @@ import kotlin.test.Test
 
 class NidaApiTest {
 
-    @Test
-    fun should_get_nida_info() {
-        expect(1 + 1).toBe(2)
-    }
-
     val api = NidaApiBrela()
 
     @Test
-//    @Ignore
+    @Ignore
     fun should_fetch_data() = runTest {
         val res = api.info("03923093098423456895").await()
         println(res)
