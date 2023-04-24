@@ -1,4 +1,4 @@
-import expect.expect
+import kommander.expect
 import kida.NidaApi
 import kida.NidaApiFake
 import koncurrent.later.test

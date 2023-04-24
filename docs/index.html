@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>All modules</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="index.html">
+                    <span>Kida</span>
+            </a>
+    </div>
+    <div>
+2.0.16    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="Kida::.ext/allModules///PointingToDeclaration//0">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <div class="cover ">
+      <h1 class="">Kida</h1>
+      <p class="paragraph">Unofficial Concurrent Kotlin Multiplatform NIDA API</p>
+      <p class="paragraph">       </p>
+      <h2 class=""> Usage</h2>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">val api: NidaApi = NidaApiBrela()<br>api.info(nin = &quot;19900101000000000001&quot;).then {<br>    println(it.name) // John Makongoro Doe<br>    println(it.dateOfBirth) // 1990-01-01<br>    // . . .<br>    println(it.nationality) // Tanzanian<br>}.catch {<br>    println(&quot;Oops!, Error: ${it.message}&quot;)<br>}</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h2 class=""> Setup</h2>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation(&quot;io.ktor:ktor-client-cio:[ktor-version]&quot;) // or any other ktor client engine<br>    implementation(&quot;tz.co.asoft:kida-brela:2.0.16&quot;)<br>}</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h2 class=""> Ktor</h2>
+      <p class="paragraph">To make it easy for ktor users to choose their own client engines We have provided an extra artifact kida-ktor where one would include the artifact and their favourite ktor-client engine</p>
+      <h3 class=""> Setup</h3>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation(&quot;tz.co.asoft:kida-ktor:2.0.16&quot;)<br>    implementation(&quot;io.ktor:ktor-client-android:[ktor-version]&quot;) // for android engine<br>    implementation(&quot;io.ktor:ktor-client-cio:[ktor-version]&quot;) // for cio engine<br>}</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h2 class=""> Coroutines Support</h2>
+      <p class="paragraph">This api has been made in a non-blocking but still easily usable from other platforms i.e. Swift, Java and even Javascript/Typescript</p>
+      <p class="paragraph">It comes with a suspending method <code class="lang-kotlin">await</code> that can be called in suspend functions</p>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">val info = api.info(nin = &quot;&lt;nin-goes-here&gt;&quot;).await() // &lt;&lt; suspends on await<br>with(info) {<br>    println(name) // John Makongoro Doe<br>    println(dateOfBirth) // 1990-01-01<br>    // . . .<br>    println(nationality) // Tanzanian<br>}</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h2 class=""> Testing</h2>
+      <p class="paragraph">To make it easy to write tests for your logic, we have integrated a NidaApiFake implementation</p>
+      <h3 class=""> Usage</h3>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">val api: NidaApi = NidaApiFake()<br>api.info(&quot;19900101000000000001&quot;)</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h3 class=""> Setup</h3>
+      <p class="paragraph">Just add the <code class="lang-kotlin">kida-fake</code> implementation on your tests</p>
+      <div class="sample-container">
+        <pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation(&quot;tz.co.asoft:kida-fake:2.0.16&quot;)<br>}</code></pre>
+<span class="top-right-position"><span class="copy-icon"></span>
+          <div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div>
+        </span></div>
+      <h3 class=""> Test Subjects</h3>
+      <p class="paragraph">You can use these two nin to test if you have everything wired up correctly</p>
+      <ol>
+        <li>
+          <p class="paragraph">John Makongoro Doe (nin: 19900101000000000001)</p>
+        </li>
+        <li>
+          <p class="paragraph">Jane Makukuru Doe (nin: 19900101000000000002)</p>
+        </li>
+      </ol>
+      <h2 class=""> Support</h2>
+      <p class="paragraph">There are multiple ways you can support this project</p>
+      <h3 class=""> Start It</h3>
+      <p class="paragraph">If you found it useful, just give it a star</p>
+      <h3 class=""> Contribute</h3>
+      <p class="paragraph">You can help by submitting pull request to available open tickets on the issues section</p>
+      <h3 class=""> Report Issues</h3>
+      <p class="paragraph">This makes it easier to catch bugs and offer enhancements required</p>
+      <h2 class=""> Credits</h2>
+      <ul>
+        <li>
+          <p class="paragraph"><a href="https://github.com/andylamax">andylamax</a> - The author</p>
+        </li>
+        <li>
+          <p class="paragraph"><a href="https://github.com/aSoft-Ltd/koncurrent/tree/main/later">koncurrent-later</a> - Non blocking kotlin multiplatform library</p>
+        </li>
+        <li>
+          <p class="paragraph"><a href="https://github.com/Kalebu/Nida">nida</a> - The python equivalent library</p>
+        </li>
+        <li>
+          <p class="paragraph"><a href="https://github.com/alphaolomi/laravel-nida">laravel-nida</a> The php equivalent library</p>
+        </li>
+      </ul>
+    </div>
+    <h2 class="">All modules:</h2>
+    <div class="table"><a data-name="-1153657372%2FMain%2F0" anchor-label="functions-core" id="-1153657372%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="functions-core/index.html">functions-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1153657372%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-418621719%2FMain%2F0" anchor-label="kase-core" id="-418621719%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="kase-core/index.html">kase-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-418621719%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-562620990%2FMain%2F0" anchor-label="kevlar-core" id="-562620990%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="kevlar-core/index.html">kevlar-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-562620990%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-103700563%2FMain%2F0" anchor-label="kida-api" id="-103700563%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="kida-api/index.html">kida-api</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-103700563%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="248979453%2FMain%2F0" anchor-label="kida-brela" id="248979453%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="kida-brela/index.html">kida-brela</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="248979453%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="1184704742%2FMain%2F0" anchor-label="kida-fake" id="1184704742%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="kida-fake/index.html">kida-fake</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1184704742%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-1812823206%2FMain%2F0" anchor-label="kollections-atomic" id="-1812823206%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="kollections-atomic/index.html">kollections-atomic</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1812823206%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-1069605447%2FMain%2F0" anchor-label="kollections-interoperable" id="-1069605447%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="kollections-interoperable/index.html">kollections-interoperable</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1069605447%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="533372105%2FMain%2F0" anchor-label="kommander-core" id="533372105%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="kommander-core/index.html">kommander-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="533372105%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-1603868147%2FMain%2F0" anchor-label="kommander-coroutines" id="-1603868147%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="kommander-coroutines/index.html">kommander-coroutines</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1603868147%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="657392547%2FMain%2F0" anchor-label="koncurrent-executors-core" id="657392547%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="koncurrent-executors-core/index.html">koncurrent-executors-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="657392547%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="1416971623%2FMain%2F0" anchor-label="koncurrent-executors-coroutines" id="1416971623%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="koncurrent-executors-coroutines/index.html">koncurrent-executors-coroutines</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1416971623%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="1940252696%2FMain%2F0" anchor-label="koncurrent-executors-mock" id="1940252696%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="koncurrent-executors-mock/index.html">koncurrent-executors-mock</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1940252696%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-742361553%2FMain%2F0" anchor-label="koncurrent-later-core" id="-742361553%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="koncurrent-later-core/index.html">koncurrent-later-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-742361553%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="76652275%2FMain%2F0" anchor-label="koncurrent-later-coroutines" id="76652275%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="koncurrent-later-coroutines/index.html">koncurrent-later-coroutines</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="76652275%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="2129741980%2FMain%2F0" anchor-label="koncurrent-later-test" id="2129741980%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="koncurrent-later-test/index.html">koncurrent-later-test</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2129741980%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
