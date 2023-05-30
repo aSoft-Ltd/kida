@@ -2,7 +2,7 @@
 
 Unofficial Concurrent Kotlin Multiplatform NIDA API
 
-![Maven](https://img.shields.io/maven-central/v/tz.co.asoft/kida/2.0.16?style=for-the-badge)
+![Maven](https://img.shields.io/maven-central/v/tz.co.asoft/kida-api/2.0.17?style=for-the-badge)
 ![Kotlin](https://img.shields.io/badge/kotlin-multiplatform-blue?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=&logoColor=white)
@@ -30,7 +30,7 @@ api.info(nin = "19900101000000000001").then {
 ```kotlin
 dependencies {
     implementation("io.ktor:ktor-client-cio:[ktor-version]") // or any other ktor client engine
-    implementation("tz.co.asoft:kida-brela:2.0.16")
+    implementation("tz.co.asoft:kida-brela:2.0.17")
 }
 ```
 
@@ -44,7 +44,7 @@ the artifact and their favourite ktor-client engine
 
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:kida-ktor:2.0.16")
+    implementation("tz.co.asoft:kida-ktor:2.0.17")
     implementation("io.ktor:ktor-client-android:[ktor-version]") // for android engine
     implementation("io.ktor:ktor-client-cio:[ktor-version]") // for cio engine
 }
@@ -87,7 +87,7 @@ Just add the `kida-fake` implementation on your tests
 
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:kida-fake:2.0.16")
+    implementation("tz.co.asoft:kida-fake:2.0.17")
 }
 ```
 

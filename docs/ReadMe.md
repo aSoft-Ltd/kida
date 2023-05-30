@@ -2,6 +2,7 @@
 
 Unofficial Concurrent Kotlin Multiplatform NIDA API
 
+![Maven](https://img.shields.io/maven-central/v/tz.co.asoft/kida-api/[version]?style=for-the-badge)
 [badges]
 
 ## Usage
