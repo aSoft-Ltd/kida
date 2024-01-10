@@ -32,16 +32,11 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
 
 rootProject.name = "kida"
 
-includeBuild("../able")
+listOf("kommander", "kollections", "kevlar", "kase", "koncurrent").forEach {
+    includeBuild("../$it")
+}
 
-// dependencies
-includeSubs("functions", "../functions", "core")
-includeSubs("kommander", "../kommander", "core", "coroutines")
-includeSubs("kollections", "../kollections", "atomic", "interoperable")
-includeSubs("kevlar", "../kevlar", "core")
-includeSubs("kase", "../kase", "core")
-includeSubs("koncurrent-executors", "../koncurrent/executors", "core", "coroutines", "mock")
-includeSubs("koncurrent-later", "../koncurrent/later", "core", "coroutines", "test")
+includeBuild("../able")
 
 // submodules
 includeSubs("kida", ".", "api", "brela", "fake")
