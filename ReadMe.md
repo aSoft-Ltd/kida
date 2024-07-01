@@ -2,9 +2,8 @@
 
 Unofficial Concurrent Kotlin Multiplatform NIDA API
 
-![badge][badge-maven] ![badge][badge-mpp] ![badge][badge-linux] ![badge][badge-macos] ![badge][badge-android] ![badge][badge-ios] ![badge][badge-watchos] ![badge][badge-tvos] ![badge][badge-js] ![badge][badge-jvm]
-
-![Kotlin](https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+![Maven](https://img.shields.io/maven-central/v/tz.co.asoft/kida-api/2.0.17?style=for-the-badge)
+![Kotlin](https://img.shields.io/badge/kotlin-multiplatform-blue?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=&logoColor=white)
 ![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
@@ -15,7 +14,7 @@ Unofficial Concurrent Kotlin Multiplatform NIDA API
 ## Usage
 
 ```kotlin
-val api: NidaApi = NidaApi()
+val api: NidaApi = NidaApiBrela()
 api.info(nin = "19900101000000000001").then {
     println(it.name) // John Makongoro Doe
     println(it.dateOfBirth) // 1990-01-01
@@ -30,7 +29,8 @@ api.info(nin = "19900101000000000001").then {
 
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:kida-core:<version>")
+    implementation("io.ktor:ktor-client-cio:[ktor-version]") // or any other ktor client engine
+    implementation("tz.co.asoft:kida-brela:2.0.17")
 }
 ```
 
@@ -44,9 +44,9 @@ the artifact and their favourite ktor-client engine
 
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:kida-ktor:<version>")
-    implementation("io.ktor:ktor-client-android:<ktor-version>") // for android engine
-    implementation("io.ktor:ktor-client-cio:<ktor-version>") // for cio engine
+    implementation("tz.co.asoft:kida-ktor:2.0.17")
+    implementation("io.ktor:ktor-client-android:[ktor-version]") // for android engine
+    implementation("io.ktor:ktor-client-cio:[ktor-version]") // for cio engine
 }
 ```
 
@@ -87,7 +87,7 @@ Just add the `kida-fake` implementation on your tests
 
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:kida-fake:<version>")
+    implementation("tz.co.asoft:kida-fake:2.0.17")
 }
 ```
 
@@ -120,23 +120,3 @@ This makes it easier to catch bugs and offer enhancements required
 - [koncurrent-later](https://github.com/aSoft-Ltd/koncurrent/tree/main/later) - Non blocking kotlin multiplatform library
 - [nida](https://github.com/Kalebu/Nida) - The python equivalent library
 - [laravel-nida](https://github.com/alphaolomi/laravel-nida) The php equivalent library
-
-[badge-maven]: https://img.shields.io/maven-central/v/tz.co.asoft/kida-core/2?style=flat
-
-[badge-mpp]: https://img.shields.io/badge/kotlin-multiplatform-blue?style=flat
-
-[badge-macos]: http://img.shields.io/badge/platform-macos-silver.svg?style=flat
-
-[badge-linux]: http://img.shields.io/badge/platform-linux-green.svg?style=flat
-
-[badge-android]: http://img.shields.io/badge/platform-android-brightgreen.svg?style=flat
-
-[badge-jvm]: http://img.shields.io/badge/platform-jvm-orange.svg?style=flat
-
-[badge-ios]: http://img.shields.io/badge/platform-ios-silver.svg?style=flat
-
-[badge-tvos]: http://img.shields.io/badge/platform-tvos-silver.svg?style=flat
-
-[badge-watchos]: http://img.shields.io/badge/platform-watchos-silver.svg?style=flat
-
-[badge-js]: http://img.shields.io/badge/platform-js-yellow.svg?style=flat

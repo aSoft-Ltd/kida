@@ -2,7 +2,7 @@ package kida
 
 import kotlin.js.JsExport
 
-@JsExport
+//@JsExport
 interface Person {
     val name: String
     val sex: Sex

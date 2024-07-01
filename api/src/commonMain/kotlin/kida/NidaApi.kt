@@ -5,7 +5,7 @@ package kida
 import koncurrent.Later
 import kotlin.js.JsExport
 
-@JsExport
+//@JsExport
 interface NidaApi {
     fun info(nin: String): Later<Person>
 }

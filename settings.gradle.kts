@@ -9,7 +9,7 @@ pluginManagement {
 
     dependencyResolutionManagement {
         versionCatalogs {
-            file("gradle/versions").listFiles().map {
+            file("../versions/gradle/versions").listFiles().map {
                 it.nameWithoutExtension to it.absolutePath
             }.forEach { (name, path) ->
                 create(name) { from(files(path)) }
@@ -30,15 +30,13 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
     }
 }
 
-val tmp = 2
+rootProject.name = "kida"
 
-rootProject.name = "asoft"
+listOf("kommander", "kollections", "kevlar", "kase", "koncurrent").forEach {
+    includeBuild("../$it")
+}
 
-// dependencies
-includeSubs("functions", "../functions", "core")
-includeSubs("expect", "../expect", "core", "coroutines")
-includeSubs("koncurrent-primitives", "../koncurrent/primitives", "core", "coroutines", "mock")
-includeSubs("koncurrent-later", "../koncurrent/later", "core", "coroutines", "test")
+includeBuild("../able")
 
 // submodules
-includeSubs("kida", ".", "api", "core", "ktor", "fake")
+includeSubs("kida", ".", "api", "brela", "fake")
