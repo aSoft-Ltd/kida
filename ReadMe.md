@@ -102,7 +102,7 @@ You can use these two nin to test if you have everything wired up correctly
 
 There are multiple ways you can support this project
 
-### Start It
+### Star It
 
 If you found it useful, just give it a star
 
