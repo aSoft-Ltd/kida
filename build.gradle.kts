@@ -9,11 +9,16 @@ import com.vanniktech.maven.publish.SonatypeHost
     alias(kotlinz.plugins.dokka)
 }
 
+val v = libs.versions.asoft.get()
+
 repositories {
-    publicRepos()
+	publicRepos()
 }
 
-val v = asoft.versions.root.get()
+allprojects {
+    group = "tz.co.asoft"
+    version = v
+}
 
 group = "tz.co.asoft"
 version = v
