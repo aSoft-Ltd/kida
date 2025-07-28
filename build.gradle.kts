@@ -46,7 +46,7 @@ subprojects {
 
         pom {
             name.set(p.name)
-            description.set(p.description)
+            description.set(p.description ?: p.name)
             inceptionYear.set("2019")
             url.set("https://github.com/aSoft-Ltd/kida")
             licenses {
