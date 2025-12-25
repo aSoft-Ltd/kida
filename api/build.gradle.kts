@@ -15,13 +15,4 @@ kotlin {
 //    val ndkTargets = if (Targeting.NDK) ndkTargets() else listOf()
     if (Targeting.LINUX) linuxTargets() else listOf()
 //    val mingwTargets = if (Targeting.MINGW) mingwTargets() else listOf()
-
-    sourceSets {
-        val commonMain by getting {
-            dependencies {
-                api(libs.koncurrent.later.core)
-                api(kotlinx.serialization.json)
-            }
-        }
-    }
 }

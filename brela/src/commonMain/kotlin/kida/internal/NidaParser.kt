@@ -8,10 +8,10 @@ import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 
 internal class NidaParser {
-    fun parse(resp: String): Person {
+    fun parse(resp: String): Person? {
         val jObject = Json.decodeFromString(JsonObject.serializer(), resp)
         val obj = jObject.obj
-        val result = obj?.result ?: throw RuntimeException(obj?.error ?: "Unknown error")
+        val result = obj?.result ?: return null
         return Person(
             name = "${result.name(FIRSTNAME)} ${result.name(MIDDLENAME)} ${result.name(SURNAME)}",
             sex = Sex.values().first { it.name.uppercase() == result.string(SEX) },

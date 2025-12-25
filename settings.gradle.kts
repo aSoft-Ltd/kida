@@ -32,7 +32,7 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
 
 rootProject.name = "kida"
 
-listOf("kommander", "kollections", "kevlar", "kase", "koncurrent").forEach {
+listOf("kommander").forEach {
     includeBuild("../$it")
 }
 

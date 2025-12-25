@@ -22,7 +22,7 @@ kotlin {
         }
 
         commonTest.dependencies {
-            implementation(libs.koncurrent.later.coroutines)
+            implementation(kotlinx.coroutines.test)
             implementation(libs.kommander.coroutines)
         }
 

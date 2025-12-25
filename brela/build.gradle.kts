@@ -1,6 +1,5 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("plugin.serialization")
     id("tz.co.asoft.library")
 }
 
@@ -18,12 +17,12 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             api(projects.kidaApi)
-            api(libs.koncurrent.later.coroutines)
+            api(kotlinx.serialization.json)
             api(ktor.client.core)
         }
 
         commonTest.dependencies {
-            implementation(libs.koncurrent.later.coroutines)
+            api(kotlinx.serialization.json)
             implementation(libs.kommander.coroutines)
         }
 
